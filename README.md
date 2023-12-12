@@ -1,7 +1,3 @@
-To create comprehensive documentation for MXTURE, I'll cover several key areas including the overall architecture, models, and their relationships. Given the information from the `models.js` file and the `mxturedb.sqlite3` database, here's a structured outline:
-
----
-
 # MXTURE Documentation
 
 ## Overview
