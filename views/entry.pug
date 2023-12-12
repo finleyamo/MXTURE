@@ -1,0 +1,17 @@
+extends _template
+
+block headcontent
+    - const title = entry.headline
+    - const published = entry.createdAt
+    - const creators = entry.Creators
+    - console.log(creators)
+block bodycontent
+    .container.mt-5
+        if entry.coverimname
+            img(src=`/static/${entry.coverimname}`).img-fluid.rounded.mb-3
+        h1= entry.headline
+        p.lead= entry.byline
+        p Published #{published.getDate()}/#{published.getMonth() + 1}/#{published.getFullYear()}
+            |  by 
+            include _creator-list
+        div !{entry.content}

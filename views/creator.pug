@@ -1,0 +1,18 @@
+extends _template
+
+block headcontent
+    - const title = creator.displayname
+    - const entries = creator.Entries
+
+block bodycontent
+    .container.mt-5
+        .row
+            if creator.pfpname
+                .col-6.col-md-5.col-lg-4.col-xl-3.mb-2
+                    img(src=`/static/${creator.pfpname}`, alt=`${creator.displayname}'s Profile Picture on MXTURE`).img-fluid.rounded
+            .col
+                h1.display-1= creator.displayname
+                    small.text-muted= ' ' + creator.descriptors
+                p.lead @#{creator.username}
+        p.my-4= creator.bio 
+        include _entry-list

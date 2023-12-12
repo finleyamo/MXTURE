@@ -1,0 +1,10 @@
+for pair in creators.map((el, idx) => [el.dataValues, idx])
+    - var idx = pair[1]
+    - var creator = pair[0]
+    - console.log(creator)
+    if idx == creators.length - 1
+        a(href=`/@${creator.username}`) #{creator.displayname}
+        | .
+    else
+        a(href=`/@${creator.username}`) #{creator.displayname}
+        | , 

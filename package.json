@@ -1,0 +1,19 @@
+{
+  "name": "mxture",
+  "version": "1.0.0",
+  "description": "The free-to-read, open-submission, peer-reviewed multimedia online journal created by everyone, for everyone.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "author": "Finley Owen",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.2",
+    "express": "^4.18.2",
+    "pug": "^3.0.2",
+    "sequelize": "^6.35.1",
+    "sqlite3": "^5.1.6"
+  }
+}

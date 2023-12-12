@@ -1,0 +1,15 @@
+extends _template
+
+block headcontent
+    - const title = 'Home'
+
+block bodycontent
+    img(src="/static/mai-cozy-1.jpeg" style="max-height: 30vh; width: 100vw; object-fit: cover;" alt="Cozy Core (from Maija Ok)").img-fluid
+    .container.px-3.px-sm-0
+        .my-5
+            h1.display-1.mb-3 MXTURE | 
+                small.text-muted The space for 
+                    i them.
+            p.lead We are the free-to-read, open-submission, peer-reviewed multimedia online journal created by everyone, for everyone. 
+                a(href='/about') Read more...
+        include _entry-list

@@ -1,0 +1,15 @@
+h3.mb-2.mt-3 Entries
+.row.row-cols-1.row-cols-md-2.row-cols-xl-3
+    for entry in entries
+        .col.mb-4
+            .card
+                if entry.coverimname
+                    img.card-img-top(src=`/static/${entry.coverimname}`)
+                .card-body
+                    h3.card-title= entry.headline
+                    p.card-text= entry.byline
+                    - var creators = entry.Creators
+                    if creators
+                        p by 
+                            include _creator-list
+                    a.card-link(href=`/~${entry.path}`) Read this!
