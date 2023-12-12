@@ -56,8 +56,8 @@ export const Entry = sequelize.define("Entry", {
     type: DataTypes.STRING,
     unique: true
   },
-  /** `Entry.content` is a string */
-  content: DataTypes.STRING,
+  /** `Entry.content` is a string with no maximum length. */
+  content: DataTypes.TEXT,
 });
 
 // /** Hashtag schema - DELAYED TILL NEXT VERSION */
