@@ -1,3 +1,4 @@
 db/mxturedb.log
 db/mxturedb.sqlite3
+package-lock.json
 node_modules
