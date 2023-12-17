@@ -12,7 +12,7 @@ app.use('/static', express.static('public'))
 app.get('/', async function (req, res) {
 
     // Fetch all entries from database
-    const entries = await Entry.findAll({ include: Creator })
+    const entries = await Entry.findAll({ include: Creator, order: [['updatedAt', 'DESC']] })
     
     // Render them on the index page
     res.render('index', { entries })
