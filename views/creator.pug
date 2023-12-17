@@ -14,5 +14,5 @@ block bodycontent
                 h1.display-1= creator.displayname
                     small.text-muted= ' ' + creator.descriptors
                 p.lead @#{creator.username}
-        p.my-4= creator.bio 
+                | !{creator.bio}
         include _entry-list
