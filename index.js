@@ -8,6 +8,7 @@ app.set('view engine', 'pug')
 
 app.use('/static', express.static('public'))
 
+// Index (home) page
 app.get('/', async function (req, res) {
 
     // Fetch all entries from database
@@ -17,6 +18,7 @@ app.get('/', async function (req, res) {
     res.render('index', { entries })
 })
 
+// Entry route
 app.get('/~:path', async function (req, res) {
 
     // Fetch the entry from the database
@@ -26,6 +28,7 @@ app.get('/~:path', async function (req, res) {
     res.render('entry', { entry });
 })
 
+// Creator route
 app.get('/@:username', async function (req, res) {
 
     const creator = await Creator.findOne({ where: { username: req.params.username }, include: Entry });
@@ -33,6 +36,7 @@ app.get('/@:username', async function (req, res) {
     res.render('creator', { creator })
 })
 
+// About page
 app.get('/about', async function (req, res) {
     res.render('about')
 })
